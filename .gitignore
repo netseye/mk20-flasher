@@ -1,0 +1,19 @@
+# 固件大文件不入库 (版权 + GitHub 100MB 限制) — 用户从官方渠道获取
+*.img
+*.zip
+*.7z
+*.7z.zip
+
+# 解包产物中的大体积固件本体 (rootfs/boot/boot_package/boot-resource/boot0)
+# 仅保留布局元数据: GPT/MBR/分区表/cardscript/dlinfo/env/image.cfg
+unpacked/rootfs.fex
+unpacked/boot.fex
+unpacked/boot_package.fex
+unpacked/boot-resource.fex
+unpacked/boot0_sdcard.fex
+
+# 生成的镜像
+slim/
+*.dmg
+
+.DS_Store
