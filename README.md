@@ -10,8 +10,24 @@
 
 ## 快速开始
 
+## 官方资源 (Waveshare 官方 Google Drive)
+
+| 资源 | 版本 | 链接 |
+|---|---|---|
+| **MK20 固件** | 20250929 | https://drive.google.com/file/d/1iOQt-8vGFA_LwKeZZfIqFWRY0ODv9KmA/view |
+| MK10 固件 | 20250923 | https://drive.google.com/file/d/1PvMvaGpUv8D2Lcqwy0aazP7DMFJUCh18/view |
+| SK18 固件 | 20251017 | https://drive.google.com/file/d/14RdRiNMzX3VO4FbhNHvzh8kzeXrz_Pzo/view |
+| PhoenixCard (Windows) | v4.2.7 | https://drive.google.com/file/d/11cPCashX-ncZFhbEv5gDgqQsk-HsmhXu/view |
+
+来源: Waveshare 官方教程《ScreenKey镜像更新步骤》(有道云笔记分享)。
+
+**刷后提示 (官方原文):** 若上电显示 logo 后黑屏、但 ScreenKey 软件能连接,
+在软件里**加载一次默认主题并保存**即可恢复。
+
+## 快速开始
+
 ```sh
-# 1. 获取固件 zip (微雪官方渠道), 解压出 .img
+# 1. 下载 MK20 固件 zip (上表官方链接), 解压出 .img
 # 2. 解包 (一次编译, 到处可用)
 git clone --recurse-submodules https://github.com/YuzukiTsuru/OpenixIMG.git
 cmake -B OpenixIMG/build -S OpenixIMG && cmake --build OpenixIMG/build
@@ -77,5 +93,6 @@ repack.py 亦可用 OpenixIMG 解包任意新版固件后的产物直接运行�
 ## 免责声明
 
 仅供设备所有者为自己的 MK20 刷机使用。固件版权归 Waveshare/SYK 所有,
-本仓库不分发固件本体。刷机有变砖风险,动卡前先
+本仓库不分发固件本体 — 请从上方官方 Google Drive 链接获取。
+刷机有变砖风险,动卡前先
 `hdiutil create -srcdevice /dev/diskN -format UDBZ full-backup.dmg` 整卡备份。
